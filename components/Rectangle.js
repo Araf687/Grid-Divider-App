@@ -19,7 +19,7 @@ const Rectangle = ({w,h,gridBoxColor,rectangleBg}) => {
     const numberOfBoxWidth = Math.floor(rectangleWidth / boxWidth);
     const totalBoxes = numberOfBoxHeight * numberOfBoxWidth;
     const boxArray=[];
-    console.log(numberOfBoxHeight, numberOfBoxWidth, totalBoxes);
+
     for(i=0;i<totalBoxes;i++){
       boxArray.push(<Grid height={boxHeight} width={boxWidth} bg={gridBoxColor} key={i}/>)
     }

@@ -4,7 +4,10 @@ import { SelectList } from "react-native-dropdown-select-list";
 import SearchableDropDown from "react-native-searchable-dropdown";
 
 export default InputForm = ({
-  
+  gridBoxColor,
+  rectangleBg,
+  gridHeight,
+  gridWidth,
   setGridWidth,
   setGridHeight,
   widthOptions,
@@ -30,6 +33,7 @@ export default InputForm = ({
           placeholder={"Color name or code"}
           style={styles.searchInput}
           onChangeText={(value) => setRectangleBg(value)}
+          defaultValue={rectangleBg}
         />
       </View>
       <View style={{marginTop:10,marginBottom:5}}>
@@ -38,6 +42,7 @@ export default InputForm = ({
           placeholder={"Color name or code"}
           style={styles.searchInput}
           onChangeText={(value) => setGridBoxColor(value)}
+          defaultValue={gridBoxColor}
         />
       </View>
       {heightOptions.length > 0 && widthOptions.length > 0 && (
@@ -56,6 +61,7 @@ export default InputForm = ({
                 borderRadius: 5,
               }}
               placeholder={"Select Height"}
+              defaultOption={{ key: gridHeight, value:  gridHeight+"px" }}
             />
           </View>
           <View style={{ flex: 2, padding: 5 }}>
@@ -71,6 +77,7 @@ export default InputForm = ({
                 borderRadius: 5,
               }}
               placeholder={"Select Width"}
+              defaultOption={{ key: gridWidth, value:  gridWidth+"px" }}
             />
           </View>
         </View>

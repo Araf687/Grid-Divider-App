@@ -36,13 +36,17 @@ function MainScreen() {
         rectangleBg={rectangleBg}
       />
       <InputForm
-
+        gridHeight={gridHeight}
+        gridWidth={gridWidth}
         setGridHeight={setGridHeight}
         setGridWidth={setGridWidth}
         heightOptions={heightOptions}
         widthOptions={widthOptions}
         setGridBoxColor={setGridBoxColor}
         setRectangleBg={setRectangleBg}
+        rectangleBg={rectangleBg}
+        gridBoxColor={gridBoxColor}
+
       />
     </View>
   );
